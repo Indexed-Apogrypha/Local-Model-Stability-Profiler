@@ -1,8 +1,8 @@
 # Local-Model-Stability-Profiler
-**Working Name:** LlamaStables
-**Technical Description:** A self-hosted web dashboard that automatically tests AI models against your hardware. Discovers Ollama models, runs stability tests, monitors system resources in real-time, and provides ranked recommendations based on performance and reliability metrics.
-**Purpose:** Help users identify optimal models for their specific hardware configuration through automated testing and analysis.
-**Tech Stack:** Python, Flask, Ollama API, Real-time monitoring 
+- **Working Name:** LlamaStables
+- **Technical Description:** A self-hosted web dashboard that automatically tests AI models against your hardware. Discovers Ollama models, runs stability tests, monitors system resources in real-time, and provides ranked recommendations based on performance and reliability metrics.
+- **Purpose:** Help users identify optimal models for their specific hardware configuration through automated testing and analysis.
+- **Tech Stack:** Python, Flask, Ollama API, Real-time monitoring 
 
 ## MVP Success Criteria
 - [ ] Web dashboard accessible at localhost:5000
