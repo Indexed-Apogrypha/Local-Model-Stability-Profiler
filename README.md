@@ -1,19 +1,15 @@
 # Local-Model-Stability-Profiler
-A self-hosted web dashboard that automatically tests AI models against your hardware. Discovers Ollama models, runs stability tests, monitors system resources in real-time, and provides ranked recommendations based on performance and reliability metrics.
 
-**Purpose: Help users identify optimal models for their specific hardware configuration through automated testing and analysis.**
 
-Tech Stack: 
--Python 
--Flask
--Ollama API
--Real-time monitoring 
+**Technical Description:** A self-hosted web dashboard that automatically tests AI models against your hardware. Discovers Ollama models, runs stability tests, monitors system resources in real-time, and provides ranked recommendations based on performance and reliability metrics.
+
+**Purpose:** Help users identify optimal models for their specific hardware configuration through automated testing and analysis.
+
+**Tech Stack:** Python, Flask, Ollama API, Real-time monitoring 
 
 
 __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 # MVP Success Criteria
-
-
 - [ ] Web dashboard accessible at localhost:5000
 - [ ] Auto-discovers installed Ollama models
 - [ ] Displays real-time system metrics
@@ -25,7 +21,6 @@ ________________________________________________________________________________
 __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 # MVP IMPLEMENTATION ROADMAP
 
-
 ## Week 1: Basic Flask App Foundation
 - [ ] Set up project structure and dependencies
 - [ ] Create basic Flask application skeleton
@@ -34,7 +29,7 @@ ________________________________________________________________________________
 - [ ] Add real-time system metrics display (CPU, RAM, GPU)
 - [ ] Test basic web interface functionality
 
-### Week 1 Complete When:
+### **Week 1 Complete When:**
 - Flask server runs without errors
 - Dashboard displays list of Ollama models
 - System metrics update in real-time
@@ -48,7 +43,7 @@ ________________________________________________________________________________
 - [ ] Implement basic results storage and display
 - [ ] Add start/stop testing controls
 
-### Week 2 Complete When:
+### **Week 2 Complete When:**
 - Users can select models and start tests
 - Tests run with progress indication
 - Basic pass/fail results displayed
@@ -62,7 +57,13 @@ ________________________________________________________________________________
 - [ ] Polish UI/UX and styling
 - [ ] Final testing and bug fixes
 
-## Stretch Goals (Post-MVP)
+### **Week 3 Complete When:**
+- Models ranked by stability score
+- Clear recommendations provided
+- UI is polished and user-friendly
+- Tool is usable for its intended purpose
+
+## **Stretch Goals (Post-MVP)**
 - Advanced stress testing (hour-long tests)
 - Custom test prompt creation
 - Historical results comparison
