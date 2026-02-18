@@ -1,16 +1,10 @@
 # Local-Model-Stability-Profiler
-
 **Working Name:** LlamaStables
-
 **Technical Description:** A self-hosted web dashboard that automatically tests AI models against your hardware. Discovers Ollama models, runs stability tests, monitors system resources in real-time, and provides ranked recommendations based on performance and reliability metrics.
-
 **Purpose:** Help users identify optimal models for their specific hardware configuration through automated testing and analysis.
-
 **Tech Stack:** Python, Flask, Ollama API, Real-time monitoring 
 
-
-__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-# MVP Success Criteria
+## MVP Success Criteria
 - [ ] Web dashboard accessible at localhost:5000
 - [ ] Auto-discovers installed Ollama models
 - [ ] Displays real-time system metrics
@@ -18,11 +12,8 @@ ________________________________________________________________________________
 - [ ] Provides stability scores and rankings
 - [ ] Handles crashes gracefully without system freeze
 
-
-__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-# MVP IMPLEMENTATION ROADMAP
-
-## Week 1: Basic Flask App Foundation
+## MVP IMPLEMENTATION ROADMAP
+### Week 1: Basic Flask App Foundation
 - [ ] Set up project structure and dependencies
 - [ ] Create basic Flask application skeleton
 - [ ] Implement model discovery (ollama list integration)
@@ -36,7 +27,7 @@ ________________________________________________________________________________
 - System metrics update in real-time
 - Basic navigation works
 
-## Week 2: Testing Engine Core
+### Week 2: Testing Engine Core
 - [ ] Implement model selection interface with checkboxes
 - [ ] Create simple test runner with basic prompts
 - [ ] Add crash detection and error handling
@@ -50,7 +41,7 @@ ________________________________________________________________________________
 - Basic pass/fail results displayed
 - No system crashes during testing
 
-## Week 3: Polish & Results System
+### Week 3: Polish & Results System
 - [ ] Develop stability scoring algorithm (1-10 scale)
 - [ ] Implement model ranking and sorting
 - [ ] Create basic recommendation engine
