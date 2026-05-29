@@ -1,0 +1,15 @@
+# Mistral Nemo (12B) tuned for the obsidian-llm-wiki plugin.
+# European (Apache-2.0) model, English-strong, 128K context, ~7GB at Q4 ->
+# the lightest option / most VRAM headroom on a 16GB card. No Chinese leakage.
+#
+# Use this if Gemma's prose style isn't to your taste or you want maximum
+# context headroom.
+#
+# Build:  ollama create mistral-wiki -f mistral-wiki.Modelfile
+FROM mistral-nemo:12b
+
+# Long context -- the plugin never sends num_ctx (Ollama defaults to ~4K).
+PARAMETER num_ctx 32768
+
+# Mistral Nemo is unusual: it runs best at a LOW temperature (~0.3).
+PARAMETER temperature 0.3

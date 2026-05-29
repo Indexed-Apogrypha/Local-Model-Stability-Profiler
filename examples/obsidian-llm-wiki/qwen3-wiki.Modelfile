@@ -1,0 +1,22 @@
+# Qwen3-14B tuned for the obsidian-llm-wiki plugin.
+#
+# Qwen3 is the strongest 14B-class model at structured/JSON output, BUT on an
+# ENGLISH-only vault it injects Chinese: it's an Alibaba model, and the plugin
+# forces a "translation" alias on every page (for cross-language dedup), which
+# Qwen fills with Chinese -- even when Wiki Output Language is set to English.
+#
+# Kept here for A/B comparison only. For an English vault, prefer gemma-wiki
+# or mistral-wiki.
+#
+# Build:  ollama create qwen3-wiki -f qwen3-wiki.Modelfile
+FROM qwen3:14b
+
+# Long context -- the plugin never sends num_ctx (Ollama defaults to ~4K).
+# Qwen3-14B is native ~32K; going past that needs YaRN, so keep it at 32768.
+PARAMETER num_ctx 32768
+
+# Qwen's recommended sampling for instruct / non-thinking use
+PARAMETER temperature 0.7
+PARAMETER top_p 0.8
+PARAMETER top_k 20
+PARAMETER min_p 0.0

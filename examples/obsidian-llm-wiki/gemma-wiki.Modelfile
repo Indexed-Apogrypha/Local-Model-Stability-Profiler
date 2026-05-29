@@ -1,0 +1,20 @@
+# Gemma 3 (12B) tuned for the obsidian-llm-wiki / "Karpathy LLM Wiki" plugin.
+# Google model, English-native -> no Chinese code-switching (unlike Qwen).
+#
+# NOTE: Gemma *4* on Ollama has NO 12B (only e2b/e4b, which are too small, and
+#       26b/31b, which are too big for a 16GB card). Gemma 3 12B is the
+#       right-sized Gemma for 16GB VRAM.
+#
+# Build:  ollama create gemma-wiki -f gemma-wiki.Modelfile
+FROM gemma3:12b
+
+# Long context -- THE key setting. The plugin never sends num_ctx, and Ollama
+# otherwise defaults to a tiny ~4K window. 32768 is native + high quality and
+# fits 16GB with headroom (~11GB total with q8_0 KV cache).
+PARAMETER num_ctx 32768
+
+# Google's recommended Gemma sampling
+PARAMETER temperature 1.0
+PARAMETER top_k 64
+PARAMETER top_p 0.95
+PARAMETER min_p 0.0
