@@ -1,0 +1,21 @@
+# Gemma 4 E4B -- the FAST pick for the obsidian-llm-wiki plugin.
+# ~4.5B EFFECTIVE params: Google positions its reasoning near their 26B model,
+# but it runs at roughly 4B-model speed (2-4x faster than gemma3:12b). 128K
+# context, English-native, fits 16GB with tons of headroom.
+#
+# Great fit here because the plugin grounds generation in YOUR notes
+# (in-context), so reasoning + context size matter more than raw parametric
+# knowledge -- which is where a small model would otherwise lose to a 12B.
+#
+# Build:  ollama create gemma-e4b-wiki -f gemma4-e4b.Modelfile
+FROM gemma4:e4b
+
+# Long context -- the plugin never sends num_ctx (Ollama defaults to ~4K).
+# Lower this to 16384/8192 for even more speed while your wiki is still small.
+PARAMETER num_ctx 32768
+
+# Google's recommended Gemma sampling
+PARAMETER temperature 1.0
+PARAMETER top_k 64
+PARAMETER top_p 0.95
+PARAMETER min_p 0.0
